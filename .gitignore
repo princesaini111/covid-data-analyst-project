@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Large/raw COVID dataset
+owid-covid-data.csv
+
+# Virtual environments
+venv/
+.venv/
+
+# Power BI temporary files
+*.tmp
+*.pbit.lock
+
+# OS files
+.DS_Store
+Thumbs.db
