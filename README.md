@@ -1,62 +1,462 @@
-# COVID-19 Public Health Data Analysis & Dashboard
+# \# COVID-19 Public Health Data Analysis
 
-**Tools:** Python (Pandas, NumPy, Matplotlib, Seaborn) · Power BI · Public Health Data
+# 
 
-## Project Overview
-End-to-end data analysis project on global COVID-19 case, death, and vaccination
-data. Covers data cleaning, exploratory data analysis (EDA), and an interactive
-Power BI dashboard tracking pandemic trends across countries and time.
+# A Data Analyst portfolio project that analyzes COVID-19 cases, deaths, vaccination progress, and population-adjusted case rates using Python and Power BI.
 
-## Files in this project
-| File | Purpose |
-|---|---|
-| `analysis.py` | Main pipeline: cleans data, runs EDA, generates charts, exports Power BI-ready tables |
-| `generate_demo_data.py` | Creates a small demo dataset so you can test-run the pipeline immediately |
-| `covid_sample_data.csv` | Demo/test dataset (synthetic, for pipeline testing only) |
-| `charts/` | 5 EDA visualizations (PNG) |
-| `exports_for_powerbi/` | 4 clean CSVs, ready to import into Power BI |
+# 
 
-## Step 1 — Get the REAL dataset (important)
-The demo dataset included here is synthetic and only meant to let you test
-that the code runs. **For your actual resume-worthy project, use real data:**
+# \## 📊 Project Overview
 
-1. Go to: https://github.com/owid/covid-19-data/blob/master/public/data/owid-covid-data.csv
-2. Click **"Download raw file"**
-3. Save it in this same folder as `owid-covid-data.csv`
-4. Re-run `python3 analysis.py` — it automatically detects and uses the real file
+# 
 
-This is Our World in Data's dataset — the same source used by most public COVID
-dashboards and news outlets, updated with full historical data across ~200 countries.
+# This project demonstrates an end-to-end data analytics workflow:
 
-## Step 2 — Run the analysis
-```bash
+# 
+
+# \- Data loading and validation
+
+# \- Data cleaning and preprocessing
+
+# \- Exploratory Data Analysis (EDA)
+
+# \- Time-series analysis
+
+# \- KPI calculation
+
+# \- Country-level comparison
+
+# \- Population-normalized analysis
+
+# \- Data visualization
+
+# \- Power BI dashboard development
+
+# 
+
+# The analysis is implemented in Python using Pandas, NumPy, Matplotlib, and Seaborn. Cleaned and aggregated datasets are exported for use in Power BI.
+
+# 
+
+# \---
+
+# 
+
+# \## 🎯 Project Objectives
+
+# 
+
+# The main objectives of this project are to:
+
+# 
+
+# 1\. Analyze the progression of COVID-19 cases over time.
+
+# 2\. Compare COVID-19 impact across countries.
+
+# 3\. Analyze COVID-19 deaths and case fatality rates.
+
+# 4\. Evaluate vaccination progress.
+
+# 5\. Compare cases using population-adjusted metrics.
+
+# 6\. Create business/public-health focused visualizations.
+
+# 7\. Build a Power BI dashboard for interactive analysis.
+
+# 
+
+# \---
+
+# 
+
+# \## 🛠️ Tools \& Technologies
+
+# 
+
+# | Tool | Purpose |
+
+# |---|---|
+
+# | Python | Data analysis and preprocessing |
+
+# | Pandas | Data cleaning and transformation |
+
+# | NumPy | Numerical calculations |
+
+# | Matplotlib | Data visualization |
+
+# | Seaborn | Statistical visualization |
+
+# | Power BI | Interactive dashboard development |
+
+# | DAX | KPI and calculated measure creation |
+
+# | Git \& GitHub | Version control and project sharing |
+
+# 
+
+# \---
+
+# 
+
+# \## 📁 Project Structure
+
+# 
+
+# ```text
+
+# covid-data-analyst-project/
+
+# │
+
+# ├── analysis.py
+
+# ├── create\_dataset.py
+
+# ├── generate\_demo\_data.py
+
+# ├── README.md
+
+# ├── .gitignore
+
+# │
+
+# ├── charts/
+
+# │   ├── 01\_global\_daily\_cases\_trend.png
+
+# │   ├── 02\_top10\_countries\_cases.png
+
+# │   ├── 03\_case\_fatality\_rate.png
+
+# │   ├── 04\_vaccination\_progress.png
+
+# │   └── 05\_cases\_per\_million.png
+
+# │
+
+# └── exports\_for\_powerbi/
+
+# &#x20;   ├── clean\_full\_data.csv
+
+# &#x20;   ├── country\_summary\_latest.csv
+
+# &#x20;   ├── global\_daily\_trend.csv
+
+# &#x20;   └── continent\_summary.csv
+
+🔄 Data Analysis Workflow
+
+Raw COVID-19 Data
+
+&#x20;      ↓
+
+Data Loading
+
+&#x20;      ↓
+
+Data Cleaning
+
+&#x20;      ↓
+
+Missing Value Handling
+
+&#x20;      ↓
+
+Data Type Conversion
+
+&#x20;      ↓
+
+Exploratory Data Analysis
+
+&#x20;      ↓
+
+KPI Calculation
+
+&#x20;      ↓
+
+Visualization
+
+&#x20;      ↓
+
+CSV Export
+
+&#x20;      ↓
+
+Power BI Dashboard
+
+🧹 Data Cleaning \& Preprocessing
+
+
+
+The Python analysis pipeline performs the following steps:
+
+
+
+Converts date fields into datetime format.
+
+Selects relevant analytical columns.
+
+Removes aggregate rows where required.
+
+Converts numerical fields to numeric data types.
+
+Handles missing numerical values.
+
+Removes negative values caused by daily data corrections.
+
+Sorts data by country and date.
+
+Creates summary datasets for Power BI.
+
+📈 Python Analysis
+
+
+
+The project generates five visualizations.
+
+
+
+1\. Global Daily COVID-19 Cases
+
+
+
+A 7-day rolling average is used to identify the overall trend while reducing daily fluctuations.
+
+
+
+2\. Top 10 Countries by Total Cases
+
+
+
+Compares countries based on their latest cumulative confirmed cases.
+
+
+
+3\. Case Fatality Rate
+
+
+
+Calculates the percentage of confirmed cases that resulted in deaths.
+
+
+
+4\. Vaccination Progress
+
+
+
+Tracks cumulative vaccination progress over time for the largest countries by population.
+
+
+
+5\. Cases per Million
+
+
+
+Uses population-adjusted cases to provide a more meaningful comparison between countries of different population sizes.
+
+
+
+📊 Power BI Dashboard
+
+
+
+The cleaned datasets generated by Python can be imported into Power BI to create an interactive dashboard.
+
+
+
+Dashboard KPIs
+
+Total Cases
+
+Total Deaths
+
+Total Vaccinations
+
+Case Fatality Rate
+
+Cases per Million
+
+Dashboard Visuals
+
+Global COVID-19 Cases Trend
+
+Top 10 Countries by Total Cases
+
+Cases per Million
+
+Vaccination Progress
+
+Country-level analysis
+
+Continent-level comparison
+
+Interactive Features
+
+Country slicer
+
+Date filtering
+
+KPI cards
+
+Interactive charts
+
+Country comparison
+
+📂 Power BI Data Exports
+
+
+
+The Python pipeline creates the following Power BI-ready files:
+
+
+
+clean\_full\_data.csv
+
+
+
+Complete cleaned dataset used for detailed analysis.
+
+
+
+country\_summary\_latest.csv
+
+
+
+Latest country-level snapshot containing major KPIs.
+
+
+
+global\_daily\_trend.csv
+
+
+
+Global daily cases and deaths with 7-day rolling averages.
+
+
+
+continent\_summary.csv
+
+
+
+Aggregated cases and deaths by continent.
+
+
+
+💡 Key Analytical Metrics
+
+Case Fatality Rate
+
+Case Fatality Rate =
+
+(Total Deaths / Total Cases) × 100
+
+Cases per Million
+
+Cases per Million =
+
+(Total Cases / Population) × 1,000,000
+
+
+
+These metrics help compare COVID-19 impact across countries using both absolute and population-adjusted measures.
+
+
+
+▶️ How to Run the Project
+
+1\. Clone the repository
+
+git clone https://github.com/princesaini111/covid-data-analyst-project.git
+
+2\. Open the project folder
+
+cd covid-data-analyst-project
+
+3\. Install dependencies
+
 pip install pandas numpy matplotlib seaborn
-python3 analysis.py
-```
-This produces:
-- 5 PNG charts in `/charts` (global trend, top countries, fatality rate, vaccination progress, per-capita comparison)
-- 4 clean CSVs in `/exports_for_powerbi`, ready to load into Power BI
 
-## Step 3 — Build the Power BI dashboard
-Power BI Desktop only runs on Windows, so build this part locally:
+4\. Run the analysis
 
-1. Open **Power BI Desktop** → Get Data → Text/CSV → import all 4 files from `/exports_for_powerbi`
-2. Go to **Model view** and relate the tables on `location` (country name) where relevant
-3. Build these visuals (mirrors what a real analyst dashboard looks like):
-   - **Card visuals**: Total Cases, Total Deaths, Total Vaccinations (from `country_summary_latest.csv`, summed)
-   - **Line chart**: `global_daily_trend.csv` → date (x-axis) vs. `cases_7day_avg` and `deaths_7day_avg`
-   - **Bar chart**: `country_summary_latest.csv` → top 10 countries by `total_cases`
-   - **Map visual**: `country_summary_latest.csv` → `location` field, bubble size = `total_cases`
-   - **Bar chart**: `case_fatality_rate_%` by country
-   - **Stacked bar**: `continent_summary.csv` → cases/deaths by continent
-4. Add a **date slicer** so the dashboard is interactive
-5. Save as `covid_dashboard.pbix`
+python analysis.py
 
-## Key Insights to Write Up (based on demo run — verify against real data)
-- Global daily cases followed a multi-wave pattern, with the largest wave in mid-2021
-- Vaccination rollout began ramping in early-to-mid 2021, coinciding with the decline after the final wave
-- Case fatality rate varied noticeably by country, reflecting differences in healthcare capacity and testing coverage
-- Larger, more densely tested countries dominate raw case counts, but per-capita (cases-per-million) rankings tell a different story — worth highlighting both views
 
-## Resume Bullet (once you've run it on real data)
-> Built an end-to-end COVID-19 data analysis project using Python (Pandas, NumPy) to clean and analyze a public health dataset spanning 200+ countries and 2+ years; developed an interactive Power BI dashboard tracking case trends, fatality rates, and vaccination progress across regions.
+
+The script generates:
+
+
+
+Five charts in the charts/ folder.
+
+Power BI-ready CSV files in exports\_for\_powerbi/.
+
+📌 Dataset Note
+
+
+
+The current repository uses a small synthetic/demo COVID-19 dataset for project development and demonstration.
+
+
+
+It is structured to support the same analytical workflow expected from a daily COVID-19 public-health dataset.
+
+
+
+For production or research use, the analysis should be run against a verified public dataset such as the Our World in Data COVID-19 dataset.
+
+
+
+🚀 Skills Demonstrated
+
+
+
+This project demonstrates practical Data Analyst skills including:
+
+
+
+Python
+
+Pandas
+
+NumPy
+
+Data Cleaning
+
+Data Preprocessing
+
+Exploratory Data Analysis
+
+Time-Series Analysis
+
+KPI Development
+
+Data Visualization
+
+Statistical Comparison
+
+Power BI
+
+DAX
+
+Dashboard Development
+
+Git \& GitHub
+
+👨‍💻 Author
+
+
+
+Prince Kumar Saini
+
+
+
+Data Analyst | Python | SQL | Power BI | Data Visualization
+
+
+
+GitHub:
+
+https://github.com/princesaini111
+
